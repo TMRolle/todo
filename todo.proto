@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package todo;
+
+message ListItem {
+  string name = 1;
+  string description = 4;
+  int64 creation_time = 5; // in unix time (seconds since epoch)
+  int64 deadline_time = 6;
+  bool completed = 7;
+  repeated string tags = 8;
+}
